@@ -11,7 +11,7 @@ class PDF extends FPDF
     
     function Header()
     {
-        $this->Image('bp2.png',0,0,210,297);
+        $this->Image('bp2.jpeg',0,0,210,297);
     }
     function PieChart($w, $h, $data, $format, $colors=null)//(100,35)
 	{

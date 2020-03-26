@@ -11,17 +11,17 @@ class PDF extends FPDF
         {
             die('Could not connect: '.mysqli_error());
         }
-        mysqli_select_db($con,"sample");
+        mysqli_select_db($con,"business");
         $sql="SELECT * FROM companyprofile";
         $result=mysqli_query($con,$sql);
         if($row2=mysqli_fetch_array($result))
         {
-            list($x1,$y1)=getimagesize($row2['sicon']);
-            $x2=$x1-115;  $y2=$y1-25;
+            //list($x1,$y1)=getimagesize($row2['sicon']);
+            //$x2=$x1-115;  $y2=$y1-25;
             $this->SetXY(18,18);
             $this->SetFillColor(255,255,255);
-            $this->Cell($x2,$y2,'',0,0,'C',true);
-            $this->Image($row2['sicon'],20,20,50,20);
+            //$this->Cell($x2,$y2,'',0,0,'C',true);
+            //$this->Image($row2['sicon'],20,20,50,20);
             $this->SetXY(15,155);
             $this->SetFont('Times','BI',15);
             $this->setTextColor(0,0,0);
@@ -39,7 +39,7 @@ class PDF extends FPDF
         {
             die('Could not connect: '.mysqli_error());
         }
-        mysqli_select_db($con,"sample");
+        mysqli_select_db($con,"business");
         $sql="SELECT * FROM companyprofile";
         $result=mysqli_query($con,$sql);
         if($row1=mysqli_fetch_array($result))
@@ -61,7 +61,7 @@ if(!$con)
 {
     die('Could not connect: '.mysqli_error());
 }
-mysqli_select_db($con,"sample");
+mysqli_select_db($con,"business");
 $sql="SELECT * FROM companyprofile";
 $result=mysqli_query($con,$sql);
 $result1=mysqli_query($con,$sql);

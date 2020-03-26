@@ -388,13 +388,13 @@ for($i=0;$i<count($prob);$i++)
     $pdf->MultiCell(100,5,'Problem '.$a.' :'.$prob[$i],0,1);
     $a++;  $y+=15;
 }
-$pdf->SetXY(150,85);
+$pdf->SetXY(140,85);
 $pdf->SetFont('Times','BI',19);
 $pdf->Cell(30,10,'SOLUTIONS:',0,0);
 $sol=json_decode($row['sol']); $b=1;  $y=95;
 for($i=0;$i<count($sol);$i++)
 {
-    $pdf->SetXY(109,$y);
+    $pdf->SetXY(133,$y);
     $pdf->SetFont('Times','I',13);
     $pdf->MultiCell(100,5,'Soluation '.$b.' :'.$sol[$i],0,1);
     $b++;  $y+=17;

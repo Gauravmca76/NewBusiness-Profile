@@ -11,12 +11,12 @@ class PDF extends FPDF
         {
             die('Could not connect: '.mysqli_error());
         }
-        mysqli_select_db($con,"sample");
+        mysqli_select_db($con,"business");
         $sql="SELECT * FROM companyprofile";
         $result=mysqli_query($con,$sql);
         if($row2=mysqli_fetch_array($result))
         {
-            $this->Image($row2['sicon'],140,40,50,20);   
+            //$this->Image($row2['sicon'],140,40,50,20);   
         }
     }
     function Footer()
@@ -26,7 +26,7 @@ class PDF extends FPDF
         {
             die('Could not connect: '.mysqli_error());
         }
-        mysqli_select_db($con,"sample");
+        mysqli_select_db($con,"business");
         $sql="SELECT * FROM companyprofile";
         $result=mysqli_query($con,$sql);
         if($row1=mysqli_fetch_array($result))
@@ -48,7 +48,7 @@ if(!$con)
 {
     die('Could not connect: '.mysqli_error());
 }
-mysqli_select_db($con,"sample");
+mysqli_select_db($con,"business");
 $sql="SELECT * FROM companyprofile";
 $result=mysqli_query($con,$sql);
 $result1=mysqli_query($con,$sql);

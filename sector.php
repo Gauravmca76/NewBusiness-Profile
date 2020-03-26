@@ -128,7 +128,7 @@ class PDF_Sector extends FPDF
     		$this->SetXY(100,95);
     		$this->SetFont('Times','I',15);
     		$this->Cell(20,10,$row2['cUsername'],0,0,'C');
-            $this->Image($row2['sicon'],140,40,50,20);   
+            //$this->Image($row2['sicon'],140,40,50,20);   
         }
     }
     function Footer()

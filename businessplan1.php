@@ -9,7 +9,7 @@ class PDF extends FPDF
     var $NbVal;
     function Header()
     {
-        $this->Image('bp1.jpg',0,0,210,297);
+        $this->Image('bp1.jpeg',0,0,210,297);
     }
 	function PieChart($w, $h, $data, $format, $colors=null)//(100,35)
 	{
@@ -527,6 +527,6 @@ $pdf->SetFont('Times','I',12);
 $pdf->Cell(30,10,$row['expense2'],0,0);
 $pdf->SetXY(190,266);
 $pdf->SetFont('Times','I',12);
-$pdf->Cell(30,10,$row['expense`3'],0,0);
+$pdf->Cell(30,10,$row['expense3'],0,0);
 $pdf->Output();
 ?>

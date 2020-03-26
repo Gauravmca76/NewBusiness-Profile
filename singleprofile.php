@@ -512,5 +512,5 @@ $pdf->SetLineWidth(1.5);
 $pdf->SetAlpha(0.2);
 $pdf->RotatedImage('bekreta.png',60,150,100,50,50);
 $pdf->SetAlpha(1);
-$pdf->Output('I','Business Profile');
+$pdf->Output('I','Business Profile.pdf');
 ?>
